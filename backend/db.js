@@ -8,15 +8,22 @@ function initDB() {
         username TEXT,
         userMessage TEXT,
         aiMessage TEXT,
+now what?        sessionId TEXT,
         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
     )`);
 }
 
-function addMessage(username, userMessage, aiMessage) {
-    db.run(
-        "INSERT INTO messages (username, userMessage, aiMessage) VALUES (?, ?, ?)",
-        [username, userMessage, aiMessage]
-    );
+function addMessage(username, userMessage, aiMessage, sessionId) {
+    return new Promise((resolve, reject) => {
+        db.run(
+            "INSERT INTO messages (username, userMessage, aiMessage, sessionId) VALUES (?, ?, ?, ?)",
+            [username, userMessage, aiMessage, sessionId],
+            function (err) {
+                if (err) reject(err);
+                else resolve();
+            }
+        );
+    });
 }
 
 function getMessages(callback) {

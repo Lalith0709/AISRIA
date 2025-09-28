@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sria - Emotional Support AI</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Welcome to Sria</h2>
+		<div id="namePrompt">
+			<input type="text" id="username" placeholder="Enter your name"/>
+			<button onclick="startChat()">Start Chat</button>
+		</div>
+		<div id="chatContainer" style="display:none;">
+			<div id="chatBox"></div>
+			<input type="text" id="messageInput" placeholder="Type your feelings..."/>
+			<button onclick="sendMessage()">Send</button>
+		</div>
+	</div>
+	<script src="chat.js"></script>
+</body>
+</html>

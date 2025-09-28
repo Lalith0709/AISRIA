@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sria Admin Dashboard</title>
+	<link rel="stylesheet" href="../frontend/style.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Sria Admin Login</h2>
+		<div id="loginSection">
+			<input type="password" id="adminPassword" placeholder="Enter admin password" />
+			<button onclick="adminLogin()">Login</button>
+			<div id="loginError" style="color:red;"></div>
+		</div>
+		<div id="dashboard" style="display:none;">
+			<h3>Analytics Dashboard</h3>
+			<div>
+				<strong>Active Users:</strong> <span id="userCount"></span><br>
+				<strong>Active Sessions:</strong> <span id="sessionCount"></span><br>
+				<strong>Total Messages:</strong> <span id="messageCount"></span><br>
+			</div>
+			<h4>Users</h4>
+			<ul id="userList"></ul>
+			<h4>Conversations</h4>
+			<div id="convoList"></div>
+		</div>
+	</div>
+	<script src="admin.js"></script>
+</body>
+</html>

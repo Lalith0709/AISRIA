@@ -1,0 +1,1 @@
+This folder contains static files for deployment. Place frontend and admin files here for serving via Express static middleware.

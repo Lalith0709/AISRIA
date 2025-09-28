@@ -52,6 +52,13 @@ app.post("/api/admin/login", (req, res) => {
     }
 });
 
+
+// Serve chat landing page at '/'
+const path = require('path');
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'frontend', 'index.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Sria backend running on http://localhost:${PORT}`);
 });

@@ -8,7 +8,7 @@ function initDB() {
         username TEXT,
         userMessage TEXT,
         aiMessage TEXT,
-now what?        sessionId TEXT,
+        sessionId TEXT,
         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
     )`);
 }
